@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { EyeOpen, EyeShut } from "../";
+import { Eye, EyeOff } from "lucide-react";
 
 const PasswordField = ({ inputLabel = "Password" }) => {
     const [isClose, setIsClose] = useState(true);
@@ -18,7 +18,7 @@ const PasswordField = ({ inputLabel = "Password" }) => {
                     required
                 />
                 <span className='absolute right-2 cursor-pointer'
-                    onClick={() => setIsClose(!isClose)}>{isClose ? <EyeShut /> : <EyeOpen />}</span>
+                    onClick={() => setIsClose(!isClose)}>{isClose ? <EyeOff /> : <Eye />}</span>
             </div>
         </div>
     )
